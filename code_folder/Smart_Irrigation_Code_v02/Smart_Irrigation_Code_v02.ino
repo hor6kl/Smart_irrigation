@@ -120,12 +120,12 @@ void loop() {
 //  Serial.print(currenttime);
   
   // time loop 
-  if (millis() - currenttime > 3600000) {
+  if (millis() - currenttime > 10800000) {
 
 //      digitalWrite (relayPin_mot, HIGH);
       digitalWrite (relayPin_hum, LOW); 
 
-      delay(20000);
+      delay(30000);
       output_value_hum = analogRead(sensor_pin_hum);
 
 
@@ -188,7 +188,7 @@ void loop() {
       digitalWrite (relayPin_hum, HIGH); 
       
       obrazovka1(output_value_hum, currenttime/1000);
-//      delay(pauza);
+      delay(pauza);
      
   }
 
